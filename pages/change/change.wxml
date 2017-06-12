@@ -1,0 +1,55 @@
+<!--celebrate.wxml-->
+<view class="Grid"> 
+  <view class="Grid-cell cell-u-full">兑换商品</view> 
+</view>
+<view class="Grid">
+  <view class="Grid-cell cell-u-1of5">
+  <view class="group">
+    <icon type="success" size="20" color="{{iconColor[3]}}"/></view>
+  </view>
+  <view class="Grid-cell cell-u-1of5">兑换成功</view>
+  <view class="Grid-cell" ><text class="text">{{title}}</text></view>
+  <view class="Grid-cell cell-u-1of5"></view> 
+</view>
+<view class="Grid">
+  <view class="Grid-cell cell-u-1of5">
+  <view class="group">
+    <icon type="success" size="20" color="{{iconColor[3]}}"/></view>
+  </view>
+  <view class="Grid-cell cell-u-1of5">扣除积分</view>
+  <view class="Grid-cell" ><text class="text">{{score}}</text>分</view>
+  <view class="Grid-cell cell-u-1of5"></view>
+  <view class="Grid-cell cell-u-1of5"></view> 
+  <view class="Grid-cell cell-u-1of5"></view>  
+</view>
+<view class="Grid">
+  <view class="Grid-cell cell-u-1of5">
+  <view class="group">
+    <icon type="success" size="20" color="{{iconColor[3]}}"/></view>
+  </view>
+  <view class="Grid-cell cell-u-1of5">积分剩余</view>
+  <view class="Grid-cell" ><text class="text">{{sum}}</text>分</view>
+  <view class="Grid-cell cell-u-1of5"></view>
+  <view class="Grid-cell cell-u-1of5"></view> 
+  <view class="Grid-cell cell-u-1of5"></view>  
+</view>
+<view class="Grid"> 
+  <view class="Grid-cell cell-u-full">积分可以到商店里兑换下面的物品啦!</view> 
+</view>
+
+
+<scroll-view  scroll-Y="true" style="height: 100%"bindscrolltolower="bindlower">
+
+  <view class="listMall">
+    <block wx:for="{{change}}" wx:key="index">
+        <view>
+            <view class="img"><image src="{{item.thumb}}" mode="aspectFill"/></view>
+            <view class="name">{{item["title"]}}</view>
+            <view>
+                <text class="now_price">{{item["score"]}}分</text>
+            </view>
+          </view> 
+      </block>        
+  </view>
+</scroll-view>
+

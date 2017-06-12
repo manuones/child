@@ -1,0 +1,16 @@
+
+
+<scroll-view  scroll-Y="true" style="height: 100%" id="{{item.type}}" bindscrolltolower="bindlower">
+
+  <view class="listMall">
+    <block wx:for="{{req}}" wx:key="index">
+        <view bindtap="tocelebrate"  id="{{item.id}}">
+            <view class="img"><image src="{{item.thumb}}" mode="aspectFill"/></view>
+            <view class="name">{{item["title"]}}</view>
+            <view>
+                <text class="now_price">{{item["score"]}}分</text>
+            </view>
+          </view> 
+      </block>        
+  </view>
+</scroll-view>

@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/choice/choice",
+    "pages/user/user",
+    
+   
+    "pages/celebrate/celebrate",
+    "pages/change/change"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "加油吧！",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#F5B223",
+    "color": "#9A9A9A",
+    "list": [
+      {
+        "pagePath": "pages/choice/choice",
+        "text": "成就",
+        "iconPath":"images/ok.png",
+       
+        "selectedIconPath": "images/ok.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "商店",
+        "iconPath":"images/shop.png",
+        "selectedIconPath": "images/shop.png"
+       
+      }
+    ]
+  }
+}

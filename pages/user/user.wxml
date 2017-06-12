@@ -1,0 +1,48 @@
+<!--user.wxml-->
+
+<view class="Grid"> 
+  <view class="Grid-cell cell-u-full">个人成就</view> 
+</view>
+<view class="Grid">
+  <view class="Grid-cell cell-u-1of5">
+  <view class="group">
+    <icon type="success" size="20" color="{{iconColor[3]}}"/></view>
+  </view>
+  <view class="Grid-cell cell-u-1of5">总积分</view>
+  <view class="Grid-cell" ><text class="text">{{sum}}</text>分</view>
+  <view class="Grid-cell cell-u-1of5"></view>
+  <view class="Grid-cell cell-u-1of5"></view> 
+  <view class="Grid-cell cell-u-1of5"></view>
+</view>
+<view class="Grid"> 
+  <view class="Grid-cell cell-u-full">上一次兑换</view>
+</view>
+<view class="Grid">
+  <view class="Grid-cell cell-u-1of5">
+  <view class="group">
+    <icon type="success" size="20" color="{{iconColor[3]}}"/></view>
+  </view>
+  
+  <view class="Grid-cell" ><text class="text">{{title}}</text></view>
+  
+  <view class="Grid-cell cell-u-1of5"></view>
+</view>
+
+<view class="Grid"> 
+  <view class="Grid-cell cell-u-full">点击商品，去兑换吧！</view> 
+</view>
+<scroll-view  scroll-Y="true" style="height: 100%" id="{{item.type}}" bindscrolltolower="bindlower">
+
+  <view class="listMall">
+    <block wx:for="{{change}}" wx:key="index">
+        <view bindtap="tochange" id="{{item.id}}">
+            <view class="img"><image src="{{item.thumb}}" mode="aspectFill"/></view>
+            <view class="name">{{item["title"]}}</view>
+            <view>
+                <text class="now_price">{{item["score"]}}分</text>
+            </view>
+          </view> 
+      </block>        
+  </view>
+</scroll-view>
+
